@@ -1,0 +1,1119 @@
+:root{
+    --main-bg-color:rgba(0,0,0,0.6);
+    --secondary-text-color: white;
+    --text-color-yellow: #faeb78;
+}
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url(fonts/OpenSans-SemiBold.ttf);
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.body-kontakt{
+    background-image: url(img/ant.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply; 
+}.body-onama{
+    background-image: url(img/ant.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply; 
+}
+
+.body-jelovnik{
+    background-image: url(img/ant.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    height: 100vh;
+}
+
+h1, h2{
+    font-family: OpenSans-Regular;
+    text-transform: uppercase;
+    padding: 0;
+    margin-top: 0.2em;
+    margin-bottom: 0em;
+   
+}
+
+h3{
+    font-family: OpenSans-Regular;
+    border: 2px solid var(--text-color-yellow);
+    width: 200px;
+    text-align: center;
+    
+}
+
+
+
+/*------------------------------------NAVIGACIJSKI MENU---------------------------------*/
+
+.navbar{
+    display: flex;
+    justify-content: space-between; /* gura elemente što dalje jedne od drugih*/
+   /*justify-content: space-evenly; */
+    align-items: center; /*odnosi se na DIV elemente, Items are positioned at the center of the container*/
+    background-color: var(--main-bg-color);
+    position: fixed;
+    width: 100vw;
+    z-index: 5; /*samo da je navmenu layer iznad mainimg*/
+    }
+
+
+
+.brand-title{
+    font-size: 1.5em;
+    margin: 0.5em;
+    color: var(--secondary-text-color);
+    
+}
+
+.brand-title a{
+    text-decoration: none;
+    color: var(--text-color-yellow);
+    
+}
+/*----------------------------------------LOGO---------------------------------*/
+
+.logo{
+    background-image: url('icons/logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+   
+}
+/*------------------------------------SOCIAL MEDIA---------------------------------*/
+.social_media{
+   display: flex;
+   padding-left: 3em;
+   margin: 0em;
+   height: 80px;
+   align-items: center; /*centrira vertikalno*/
+  }
+
+.social_media ul{  
+    display: flex;
+    margin: 0;
+    padding: 1em;
+}
+
+.social_media li{  
+    margin: 0;
+    padding: 1em;
+    text-decoration: none;
+    list-style: none;
+   
+}
+
+.social_media li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text-color-yellow);
+    display: block;
+    font-family: OpenSans-Regular;
+   
+}
+
+/*------------------------------------LINKOVI---------------------------------*/
+.navbar-links{
+    margin-left: 0em;
+    padding: 0;
+   
+   
+}
+
+.navbar-links ul{   /*UL DISPLAYATI KAO FLEX, A NE LI ELEMENTE*/
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.navbar-links li{ /* CHILD ELEMENTI POSTAJU FLEX ITEMI*/
+    list-style: none;
+    z-index: 500;
+    flex-direction: ;
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+    padding: 2em;
+    display: block;
+    font-family: OpenSans-Regular;
+   /* background-color: rgba(0,0,0,0.5);*/
+    
+}
+
+
+
+
+
+/*--------------------------------------ON HOVER ANIMACIJA-----------------------------*/
+.navbar-links li:hover{
+background-color: var(--text-color-yellow);
+transition: 0.8s;
+}
+.navbar-links li a:hover{
+    color: var(--main-bg-color);
+    transition: 0.8s;
+ 
+ 
+}
+#home a{
+    color: var(--text-color-yellow)
+}
+#home a:hover{
+    color: var(--main-bg-color)
+}
+
+/*----------------------------------HAMBURGER TOGGLE BUTTON-----------------------------*/
+.toggle-button{
+    position: absolute; 
+    top: 2.7rem;
+    right: 0;
+    display: none;
+    flex-direction: column; /* kako bi se spanovi u htmlu prikazivali jedan iznad drugoga, odnosno, te 3 linije stackane kao hamburger */
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+    margin-right: 1em;
+}
+
+.toggle-button .bar{  /*HAMBURGER LINIJE*/
+height: 4px;
+width: 100%;
+background-color: var(--secondary-text-color);
+border-radius: 10px;
+}
+/*----------------------------------WELCOME IMAGE SECTION-------------------------------------*/
+.container{
+ height: 100vh;
+
+}
+.main_img{
+   background-image: url(img/7.jpg);
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color:rgba(0,0,0,0.5);
+   background-blend-mode: multiply;
+   height: 100vh; 
+   text-align: center;
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+  
+}
+
+.main_img h1{  /* JEDNINI JEBENI NAČIN CENTRIRANJA*/ /*I PARENT I CHILD SU position;relative*/
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    font-family: OpenSans-Regular;
+    font-size: 3.5em;
+}
+
+.main_img h2{
+    color: white;
+    text-transform: uppercase;
+    font-family: OpenSans-Regular;
+    font-size: 2em;
+}
+
+.radno_vrijeme{
+    height: 200px;
+    position: relative;
+    text-align: center;
+    top: 40%;
+}
+
+.radno_vrijeme h2{
+    font-size: 3em;
+    font-family: OpenSans-Regular;
+    text-transform: uppercase;
+}
+
+.radno_vrijeme h3{
+    color: white;
+    font-size: 2em;
+    font-family: OpenSans-Regular;
+    text-transform: uppercase;
+}
+
+/*----------------------------------WECLOME BUTTON-------------------------------------*/
+.main_btn{
+position: relative;
+top: 40%;
+background-color: rgba(0,0,0,0.6);
+color: var(--text-color-yellow);
+border-radius: 10px;
+border: 1px solid var(--text-color-yellow);
+padding:1em;
+width: 150px;
+transition: all 0.5s;
+cursor: pointer;
+z-index: 5000;
+}
+
+.main_btn a{
+    text-transform: uppercase;
+    font-family: OpenSans-Regular;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: var(--text-color-yellow);
+}
+
+.main_btn a:hover{
+    color: rgba(0,0,0,0.8);
+}
+
+.main_btn:hover{
+    color: rgba(0,0,0,0.8);
+    background-color: var(--text-color-yellow);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    width: 200px;
+    
+}
+
+/*-----------------------------------VIDEO------------------------------------*/
+.grid-container{
+   /*border: 2px yellow solid;*/
+}
+
+#myVideo{
+    position: relative;
+    z-index: -1;
+}
+/*----------------------------------ŽUTI DIV-------------------------------------*/
+/*.info{
+   
+    background-color: var(--text-color-yellow);
+    height: 10px;
+    width: 100vw;
+    
+}*/
+/*----------------------------------MONKEYBUSINESS-------------------------------------*/
+.slika-meni{
+    height: 500px;
+    background-image: url(img/ant.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.monkey{
+    max-width: 700px;
+    width: 100%;
+    border: 0px solid #faeb78;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.monkey h1{
+    font-family: OpenSans-Regular;
+    color: white;
+    font-size:4em;
+    }
+
+.monkey hr{
+   border: 2px solid  #faeb78;
+   width: 200px;
+    }
+
+.monkey p{
+    font-family: OpenSans-Regular;
+    color: white;
+    font-size: 16px;
+    }
+}
+/*----------------------------------JELOVNIK SECTION-------------------------------------*/
+.grid-item-2{
+    height: 500px;
+}
+
+.jelovnik-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(250px, auto);
+  grid-gap: 0rem;  
+  grid-template-areas:
+  "jedan dva tri cetiri"
+  "sest pet osam sedam"
+  ;
+
+  
+}
+
+.hrana{
+    background-image: url(img/ant.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:rgba(0,0,0,0.7);
+    background-blend-mode: multiply;
+    grid-area: jedan;
+   
+}
+.hrana_img{
+    background-image: url(img/2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: dva; 
+    
+}
+
+.pice{
+    background-image: url(img/ant.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:rgba(0,0,0,0.7);
+    background-blend-mode: multiply;
+    grid-area: tri;
+}
+.pice_img{
+    background-image: url(img/6.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: cetiri;
+}
+
+.salate{
+    background-image: url(img/ant.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:rgba(0,0,0,0.7);
+    background-blend-mode: multiply;
+    grid-area: pet;
+}
+.salate_img{
+    background-image: url(img/5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: sest;
+}
+.random{
+    background-image: url(img/ant.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:rgba(0,0,0,0.7);
+    background-blend-mode: multiply;
+    grid-area: sedam;
+}
+.random_img{
+    background-image: url(img/7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: osam;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+   background: yellow;
+}
+::-webkit-scrollbar-track{
+   background: rgba(0,0,0,0.5);
+}
+
+/*--------------------------------------MAPA-------------------------------------*/
+.mapa-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: black;
+    justify-content: space-around;
+   
+   }
+
+.itemsmapa{
+ 
+    height: 500px;
+    background-color: black;
+    text-align: center;
+    
+    /*grid-area: mapa;*/
+}
+#map{
+    
+         width: 100%;
+         z-index: 1000;
+         background-color:var(--main-bg-color);
+
+        
+}
+
+
+
+
+/*--------------------------------------FOOTER-------------------------------------*/
+.footer-grid{
+background-image: url(img/ant.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-color:rgba(0,0,0,0.7);
+background-blend-mode: multiply;
+background-attachment: fixed;
+background-position: center;
+display: grid;
+grid-template-columns: repeat(4,1fr);
+align-items: center;
+grid-template-areas: 
+"test broj rv kontakt"
+;
+}
+
+.kontaktdiv{
+    padding: 0;
+    margin-top: 1em;
+}
+.kontaktdiv .h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.itemsfooter{
+margin: 0.5em;
+/*border: 2px solid red;*/
+height: 260px;
+}
+
+.kontakt {
+    grid-area: kontakt;
+}
+
+
+.itemsfooter .kontaktdiv {
+display: flex;
+color:white;
+width: 100%;
+justify-content: center;
+align-items:center;
+flex-direction: column;
+
+}
+
+.logokontakt{
+    background-image: url(icons/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+}
+
+#logoRV{
+    background-image: url(icons/iconRV.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+}
+
+#logoMAIL{
+    background-image: url(icons/iconMAIL.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+}
+
+#logoCHAT{
+    background-image: url(icons/iconCHAT.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+}
+
+.rv{
+    grid-area: rv;
+}
+
+.itemsfooter .kontaktdiv p {
+        text-align: center;
+        color:red;
+        width: 100%;
+        margin-top: -20px;
+        padding: 0;
+        font-family: OpenSans-Regular;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        }   
+
+.broj{
+    grid-area: broj;
+}
+.test{
+    grid-area: test;
+}
+
+/*----------------------------------------------ONAMA.HTML----------------------------*/
+/*--------------------------------------------------------------------------------------*/
+.container-onama{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1040px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    padding-top: 100px;
+    grid-gap: 1em;
+     }
+
+.kartice-wrapper{
+    /*border: 2px solid blue;*/
+    display: grid;
+    grid-template-areas: "radnik1 gazda radnik2";
+    grid-template-rows: auto;
+    grid-gap: 1em;
+ 
+}
+.kartice{
+    border: solid 0px var(--main-bg-color);
+    background-color: rgba(0,0,0,0.5);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 10px 10px 10px var(--main-bg-color);
+    transition: 0.5s;
+   }
+ 
+   .kartice:hover{
+    box-shadow: 5px 5px 10px var(--text-color-yellow);
+    -ms-transform: scale(1.03,1.03); /* IE 9 */
+    transform: scale(1.03,1.03); /* Standard syntax */
+   }
+
+.opis{
+    height: 50px;
+    background-color: var(--main-bg-color);
+    width: 100%;
+    text-align: center;
+   
+}
+
+.radnik1{
+grid-area: radnik1;
+}
+.avatar1{
+      background-image: url(img/ant.jpg);
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size:cover;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 2px solid green;*/
+}
+
+.radnik2{
+grid-area: radnik2;
+}
+
+.gazda{
+grid-area: gazda;
+}
+
+.kartice-wrapper .kartice .opis > h2{
+    color: var(--text-color-yellow);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.slika4{
+    background-image: url(png/4.png);
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.slika5{
+    background-image: url(png/5.png);
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.slika6{
+    background-image: url(png/6.png);
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.slika7{
+    background-image: url(png/8.png);
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.slika8{
+    background-image: url(png/8.png);
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.slika9{
+    background-image: url(png/9.png);
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.slika10{
+    background-image: url(png/10.png);
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.slika11{
+    background-image: url(png/11.png);
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.slika12{
+    background-image: url(png/12.png);
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+
+
+/*----------------------------------------------JELOVNIK.HTML----------------------------*/
+/*--------------------------------------------------------------------------------------*/
+.container-jelovnik .itemsjelovnik > h6{
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    font-family: OpenSans-Regular;
+    font-size: 1.3em;
+    color: var(--text-color-yellow);
+}
+
+
+.container-jelovnik .itemsjelovnik > h5{
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    font-size: 1.2em;
+    font-family: OpenSans-Regular;
+    color: var(--text-color-yellow);
+}
+.container-jelovnik .itemsjelovnik > p{
+    color: white;
+    margin: 0;
+    font-size: 1em;
+    font-family: OpenSans-Regular;
+}
+
+.container-jelovnik{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1040px;
+    /*background-color: grey;*/
+    /*height: 100vh;*/
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, 120px);
+    grid-auto-rows: minmax(auto, 120px);
+    grid-gap: 10px;
+    position: relative;
+    padding-top: 100px;
+     }
+
+.itemsjelovnik{
+    padding: 10px;
+    /*border: solid 2px yellow;*/
+ 
+}
+.itemsjelovnik > hr {
+    border: var(--text-color-yellow) 1px solid;
+}
+  
+ 
+.hamburgeri {
+    grid-column: 1 / -1;
+    text-align: center;
+   /* border: 2px solid red;*/
+    color: white;
+    text-transform: uppercase; 
+    letter-spacing: 5px;  
+}
+
+.umaci{
+    grid-column: 1 / -1;
+    text-align: center;
+    color: white;
+    text-transform: uppercase; 
+    letter-spacing: 5px;  
+    
+}
+ 
+  
+
+
+
+/*----------------------------------------------GALERIJA.HTML----------------------------*/
+/*--------------------------------------------------------------------------------------*/
+
+
+.gallery-container{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+grid-auto-rows: 400px;
+grid-gap: 10px;
+grid-auto-flow: dense;
+background-image: url(img/ant.jpg);
+
+}
+
+.gallery-container > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.horizontal{
+grid-column: span 2;
+}
+
+.vertical{
+grid-row: span 2;
+}
+
+.big{
+grid-auto-columns: span 2;
+grid-row: span 2;
+}
+
+/*----------------------------------------------KONTAKT.HTML----------------------------*/
+/*--------------------------------------------------------------------------------------*/
+.kontakt-forma-wrapper{
+background-image: url(img/ant.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+padding: 40px 0;
+text-align: center; /* centrira button unutar diva*/
+
+}
+
+.kontakt-forma-wrapper h1{
+    font-family: OpenSans-Regular;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.kontakt-forma-wrapper hr{
+  width: 100px;
+  color: var(--text-color-yellow);
+  border: solid var(--text-color-yellow) 3px;
+  margin-top: 10px;
+}
+
+
+.kontakt-forma{
+max-width: 600px;
+margin: auto;
+padding: 0 10px;
+overflow: hidden;
+
+}
+
+.kontakt-forma-text{
+display: block;
+width: 100%;
+box-sizing: border-box;
+margin: 16px 0;
+border: 0;
+background: var(--main-bg-color);
+padding: 20px 40px;
+color: var(--text-color-yellow);
+border: solid 2px var(--text-color-yellow);
+font-size: 1em;
+outline: none;
+transition: 0.5s;
+font-family: OpenSans-Regular;
+}
+
+.kontakt-forma-text:focus{
+    box-shadow: 0 0 6px 1px var(--text-color-yellow);
+}
+
+textarea.kontakt-forma-text{
+    resize: none;
+    height: 150px;
+}
+
+.kontakt-forma-btn{
+    background: var(--text-color-yellow);
+    max-width: 600px;
+    width: 100%;
+    height: 70px;
+    color: black;
+    font-family: OpenSans-Regular;
+    letter-spacing: 0.1em;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border:2px solid var(--text-color-yellow);
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.kontakt-forma-btn:hover{
+    box-shadow: 0 0 6px 1px var(--text-color-yellow);
+    background: var(--main-bg-color);
+    color: var(--text-color-yellow);
+    transition: 0.5s;
+}
+
+.kontakt-forma-wrapper #errormessage{
+    font-family: OpenSans-Regular;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 0px;
+    margin: auto;
+    background-color: var(--main-bg-color);
+    color: var(--text-color-yellow);
+    text-align: center;
+    transition: all 0.5s ease;
+    max-width: 380px;
+    }
+
+/*@media screen and (min-device-width: 501px) and (max-device-width: 900px) {    
+    .toggle-button{
+        display: flex;
+
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li{
+        text-align: center;
+    }
+    .navbar-links li a{
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-links.active{
+        display: flex;
+    }
+
+
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+    ::-webkit-scrollbar-thumb{
+       background: yellow;
+    }
+    ::-webkit-scrollbar-track{
+       background: rgba(0,0,0,0.5);
+    }
+
+   
+
+}*/
+
+@media only screen and (max-width: 905px) {    
+    .toggle-button{
+        display: flex;
+
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li{
+        text-align: center;
+    }
+    .navbar-links li a{
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-links.active{
+        display: flex;
+    }
+
+    .jelovnik-grid{
+        grid-template-columns: 100% auto;
+        grid-template-areas: 
+        "jedan"
+        "dva"
+        "tri"
+        "cetiri"
+        "pet"
+        "sest"
+        "sedam"
+        "osam"
+        ;
+    }
+
+    .footer-grid{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "test"
+        "broj"
+        "rv"
+        "kontakt"
+        ;
+    }
+
+ 
+.kartice-wrapper{
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-template-columns: 100% 1fr;
+    grid-template-rows: minmax(200px auto);
+    grid-auto-rows: auto;
+    grid-template-areas:
+    "gazda"
+    "radnik1"
+    "radnik2"
+    ;
+   }
+   .kartice{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}  
+
+  
+
+    .gallery-container{
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+        padding: 0;
+        padding-top: 110px;
+    }
+
+    .container-jelovnik{
+        grid-template-columns: 70% 1fr;
+        grid-template-rows: auto;
+        grid-auto-rows: minmax(75px, auto);
+        width: 100vw;
+                         } 
+    .itemsjelovnik h5, p{
+        text-align: left;
+    }
+
+    .itemsjelovnik > hr {
+        border: var(--text-color-yellow) 1px solid;
+        width:100vw;
+    }
+      ::-webkit-scrollbar{
+        width: 10px;
+    }
+    ::-webkit-scrollbar-thumb{
+       background: var(--text-color-yellow;)    }
+    ::-webkit-scrollbar-track{
+       background: rgba(0,0,0,0.5);
+    }
+
+}
+
+
+@media (min-aspect-ratio: 16/9){    /* RESPONSIVE VIDEO */
+#myVideo{
+    width: 100%;
+    height: auto;
+}
+
+}
+@media (max-aspect-ratio: 16/9){
+
+#myVideo{
+    width: auto;
+    height: 100%;
+}
+}
+@media only screen and (max-width: 900px){
+    #myVideo{
+        display: none;
+    }
+}
+

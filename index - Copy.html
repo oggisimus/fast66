@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+
+
+    <script src='https://api.mapbox.com/mapbox.js/v3.3.0/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.3.0/mapbox.css' rel='stylesheet' />
+  
+    <title>FAST 66</title>
+</head>
+<body>
+<!-----------------------------------NAVIGACIJSKI MENU-------------------------------------->
+    <nav class="navbar">
+
+<!------------------------------------------LOGO-------------------------------------------->
+        <div class="brand-title logo">
+            <!--<a href="index.html">FAST 66</a>--->
+
+<!--------------------------------------SOCIAL MEDIA---------------------------------------->
+
+            <div class="social_media">
+                <ul>
+                    <li><a target="_blank" href="https://www.facebook.com/fastsixtysix/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a target= "_blank" href="https://www.instagram.com/fastsixtysix/"><i class="fa fa-instagram"></i></a></li>
+                    <li><a target="_top"href="mailto:copybox.labin@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        
+       
+
+
+<!---------------------------------HAMBURGER BUTTON---------------------------------------->
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+
+<!--------------------------------------LINKOVI-------------------------------------------->    
+        <div class="navbar-links">
+            <ul>
+                <li id="home"><a href="">home</a></li>
+                <li><a href="">O nama</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Galerija</a></li>
+                <li><a href="">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+     
+
+<!----------------------------------------------------------------------------------------->
+<!-----------------------------------TU POČINJE GRID--------------------------------------->
+<!----------------------------------------------------------------------------------------->
+
+
+
+
+<!-------------------------------- WELCOME IMAGE SECTION----------------------------------->
+   
+<div class="grid-container">
+    <div class="main_img grid-item grid-item-1">
+        <video autoplay muted id="myVideo">
+            <source src="video/vid.mp4" type="video/mp4">
+          </video>
+         <h1>DOBRO DOŠLI !</h1>
+         <button type="button" class="main_btn"><a target="_blank" href="tel:0912991066">NAZOVITE NAS</a></button>
+        <!--- <div class="radno_vrijeme">
+             <h2>radno vrijeme</h2>
+             <h3>radnom danom</h3>
+             <h3>10 - 18</h3>
+             <h3>utorkom i praznikom - zatvoreno</h3>
+         </div>-->
+
+         
+     </div>
+
+<!-------------------------------------ŽUTI DIV------------------------------------------->
+<div class="info"></div>
+
+<!---------------------------------JELOVNIK SECTION--------------------------------------->
+    <div class="grid-item grid-item-2">
+        
+        <div class="jelovnik-grid">
+           <div onclick="location.href='https:/www.google.com';" style="cursor: pointer;" class="item1 hrana 1"></div>
+                 <div class="item1 hrana_img 2"></div>
+                 <div class="item1 pice 3"></div>
+                 <div class="item1 pice_img 4"></div>
+                 <div class="item1 salate_img 5"></div>
+                 <div class="item1 salate 6"></div>
+                 <div class="item1 random_img 7"></div>
+                 <div class="item1 random 8"></div>
+        </div>
+    </div>
+<!------------------------------------ ŽUTI DIV------------------------------------------->
+
+    <div class="info"></div>   
+<!---------------------------------------MAPA--------------------------------------------->
+    <div class="grid-item grid-item-3"> 
+        <div class="meni-slika"></div>
+           <!-- 
+            <div class="itemsmapa mapa" id="map"></div>
+       
+<script>
+
+var Icon66 = L.icon({//FAST 66 ICON
+	iconUrl: 'icons/logo.png',
+	iconRetinaUrl: 'icons/logo.jpg',
+	iconSize: [40, 40],
+});
+var IconM = L.icon({//M ICON
+	iconUrl: 'icons/muller.png',
+	iconRetinaUrl: 'icons/muller.png',
+	iconSize: [30, 30],
+});
+var IconPOSTA = L.icon({//M POSTA
+	iconUrl: 'icons/posta.png',
+	iconRetinaUrl: 'icons/posta.png',
+	iconSize: [30, 30],
+});
+
+                L.mapbox.accessToken = 'pk.eyJ1Ijoib2dnaXNpbXVzIiwiYSI6ImNrOHE3NW05MzAwcjIzbG5wZG5sejhyN3gifQ.bgU6i7U_SIPDq1km8TSkPw';
+                var map = L.mapbox.map('map')
+                    .setView([45.091669170819756, 14.123895018818985], 17)
+                    .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
+                    L.marker([45.091669170819756, 14.123895018818985], {icon:Icon66}).addTo(map);//66 MARKER
+                    L.marker([45.0909533693322, 14.123836709880607], {icon:IconM}).addTo(map);//M MARKER
+                    L.marker([45.090809490333015, 14.123387151708357], {icon:IconPOSTA}).addTo(map);//POSTA MARKER 
+</script>
+--> 
+    </div>
+</div>
+
+ 
+<!-----------------------------------FOOTER SEKCIJA--------------------------------------->
+    <div class="grid item grid-item-4">
+         <div class="footer-grid">
+            <div class="itemsfooter kontakt">
+                      <div class="kontaktdiv"><span id="logoMAIL"></span></div>
+                      <div class="kontaktdiv"><h2>e - mail</h2></div>
+                      <div class="kontaktdiv"><h3>info@fast66.com</h3></div>  
+            </div>                           
+            <div class="itemsfooter rv">
+                      <div class="kontaktdiv"><span class="logokontakt"></span></div>
+                      <div class="kontaktdiv"><h2>adresa</h2></div>
+                      <div class="kontaktdiv"><h3>Labin, Zelenice 7</h3></div> 
+            </div>
+            <div class="itemsfooter broj">
+                     <div class="kontaktdiv"><span id="logoRV"></span></div>
+                     <div class="kontaktdiv"><h2>radno vrijeme</h2></div>
+                     <div class="kontaktdiv"><h3>10 - 18 h</h3>
+                    <div class="kontaktdiv"><p>utorkom zatvoreno</p></div> 
+                    </div> 
+                     
+                    
+            </div>
+            <div class="itemsfooter test">
+                     <div class="kontaktdiv"><span id="logoCHAT"></span></div>
+                     <div class="kontaktdiv"><h2>mob.</h2></div>
+                    <div class="kontaktdiv" onclick="window.open('tel:0912991066','new_window');" style="cursor: pointer;" ><h3>091 / 2991 - 066</h3></div> 
+            </div>
+         </div>
+   <!-- <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@nicknice?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Nick Nice"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Nick Nice</span></a>
+   --> </div>
+
+
+<!--------------------------------------------------------------------------------------->
+<!------------------------------KRAJ NEPOTREBNOG GRIDA----------------------------------->
+<!--------------------------------------------------------------------------------------->
+</div> 
+
+
+</body>
+</html>
